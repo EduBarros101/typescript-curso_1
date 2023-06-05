@@ -14,14 +14,14 @@ export class NegociacaoController {
   }
 
   adiciona(): void {
-    const negociacao = this.crianegociacao()
+    const negociacao = this.criaNegociacao()
 
     this.negociacoes.adiciona(negociacao)
     console.log(this.negociacoes.lista())
     this.limparFormulario()
   }
 
-  crianegociacao(): Negociacao {
+  criaNegociacao(): Negociacao {
     const exp = /-/g
     const date = new Date(this.inputData.value.replace(exp, ','))
     const quantidade = parseInt(this.inputQuantidade.value)
